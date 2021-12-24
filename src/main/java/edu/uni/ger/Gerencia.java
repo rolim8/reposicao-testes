@@ -8,7 +8,7 @@ import java.util.List;
 public class Gerencia {
   private List<Disciplina> disciplinas;
 
-  public Gerencia(){
+  public Gerencia(List<Disciplina> disciplina){
     this.disciplinas = new ArrayList<>();
   }
 
@@ -29,5 +29,9 @@ public class Gerencia {
     }
     return alunosAprovados;
   }
+
+  public List<Disciplina> getDisciplinas() { return disciplinas; }
+
+  public void setDisciplinas(List<Disciplina> disciplinas) { this.disciplinas = disciplinas; }
 
 }
