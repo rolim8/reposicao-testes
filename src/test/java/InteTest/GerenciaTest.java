@@ -14,6 +14,8 @@ import org.mockito.Mock;
 import java.util.List;
 import java.util.logging.Logger;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class GerenciaTest {
 
@@ -33,12 +35,22 @@ public class GerenciaTest {
     }
 
     @Test
-    public void verificaFaculdade(){
+    public void verificaProfessorNome(){
         Professor prof = new Professor();
         prof.setNome("Leuson");
 
         gerencia.setDisciplinas((List<Disciplina>) prof);
         Assert.assertEquals("Leuson", gerencia.getDisciplinas());
+    }
+
+    @Test
+    public void verificaProfessorTelefone() {
+        Professor prof = new Professor();
+
+        prof.setTelefone("1234-1234");
+
+        gerencia.setDisciplinas((List<Disciplina>) prof);
+        assertEquals("Leuson", gerencia.getDisciplinas());
     }
 
     @Test
